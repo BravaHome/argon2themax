@@ -4,6 +4,7 @@
 
 import * as os from "os";
 import * as _ from "lodash";
+import * as crypto from "crypto";
 
 // Begin Argon2 cloned interface for ease of use
 export const argon2d: number = 0;
@@ -48,9 +49,9 @@ export function generateSalt(length?: number): Promise<Buffer> {
                 reject(err);
             }
             resolve(salt);
-        })
-    })
-};
+        });
+    });
+}
 
 export const verify:
     (hash: string, plain: Buffer | string) => Promise<boolean>

@@ -18,6 +18,7 @@ export interface Options {
     parallelism?: number;
     type?: number; // argon2d, argon2i, or argon2id
     raw?: boolean;
+    salt?: Buffer;
 }
 
 export interface NumericLimit {

@@ -8,6 +8,7 @@ export interface Options {
     parallelism?: number;
     type?: number;
     raw?: boolean;
+    salt?: Buffer;
 }
 export interface NumericLimit {
     max: number;
